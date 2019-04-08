@@ -1,0 +1,9 @@
+<h3>You have used the switch {{switchedTimes}} times</h3>
+<button (click)="switchBooksDisplay()">Show/Hide</button>
+<ul *ngIf="showBooks">
+  <li *ngFor="let book of books">
+    <h3>{{book.name}}</h3>
+    <span>{{book.author}}</span>
+    <span>{{book.price | currency:"EUR"}}</span>
+  </li>
+</ul>
